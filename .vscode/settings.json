@@ -412,7 +412,7 @@
   /**
    * The font weight
    */
-  "editor.fontWeight": "bold",
+  "editor.fontWeight": "normal",
   /**
    * The font size
    */

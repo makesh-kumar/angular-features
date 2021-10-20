@@ -8,6 +8,10 @@ import { LoginModule } from './Login/login.module';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing.module';
 import { ErrorComponent } from './error.component';
+import {
+  customCanActivaChildteGuard,
+  customCanActivateGuard,
+} from './Guards/custom.guard';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule],
@@ -19,5 +23,6 @@ import { ErrorComponent } from './error.component';
     ErrorComponent,
   ],
   bootstrap: [AppComponent],
+  providers: [customCanActivateGuard, customCanActivaChildteGuard],
 })
 export class AppModule {}

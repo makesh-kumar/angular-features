@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'hello',
@@ -14,7 +15,11 @@ import { Component, Input } from '@angular/core';
   `,
   styles: [`h1 { font-family: Lato; }`],
 })
-export class HelloComponent {}
+export class HelloComponent {
+  constructor(private route: ActivatedRoute) {
+    console.log(this.route);
+  }
+}
 
 @Component({
   selector: 'hi',
