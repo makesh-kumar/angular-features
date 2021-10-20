@@ -29,14 +29,15 @@ export class customCanActivateGuard implements CanActivate {
   }
 }
 
-export interface IMy {
+export interface canComponentDeactivate {
   canExit: () => Observable<boolean> | Promise<boolean> | boolean;
 }
 
-@Injectable()
-export class customCanDeActivateGuard implements CanDeactivate<IMy> {
+export class customCanDeActivateGuard
+  implements CanDeactivate<canComponentDeactivate>
+{
   canDeactivate(
-    component: IMy,
+    component: canComponentDeactivate,
     currentRoute: ActivatedRouteSnapshot,
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot
@@ -45,8 +46,7 @@ export class customCanDeActivateGuard implements CanDeactivate<IMy> {
     | UrlTree
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree> {
-    return confirm('aa');
-    // return component.canExit();
+    return component.canExit();
   }
 }
 

@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
   canExit() {
-    console.log('in can Exit');
-    return confirm('Are you sure want to go back ?');
+    return confirm('are u sure ?');
   }
 }

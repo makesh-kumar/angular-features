@@ -17,6 +17,7 @@ const routes: Routes = [
     component: HelloComponent,
     resolve: { res: customResolveGuard },
     canActivateChild: [customCanActivaChildteGuard],
+    canDeactivate: [customCanDeActivateGuard],
 
     children: [
       { path: 'hi', component: HiComponent },
@@ -26,7 +27,6 @@ const routes: Routes = [
 
   {
     path: 'login',
-    canDeactivate: [customCanDeActivateGuard],
     canActivate: [customCanActivateGuard],
     canLoad: [customCanLoadGuard],
     loadChildren: () =>

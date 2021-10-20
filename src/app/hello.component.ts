@@ -21,7 +21,7 @@ export class HelloComponent {
   }
 
   canExit() {
-    return true;
+    return confirm("are u sure ?");
   }
 }
 
