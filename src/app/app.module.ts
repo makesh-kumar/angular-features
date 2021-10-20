@@ -13,6 +13,7 @@ import {
   customCanActivateGuard,
   customCanDeActivateGuard,
 } from './Guards/custom.guard';
+import { CustomAppendPipe, CustomChangeCasePipe } from './Pipes/custom.pipes';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule],
@@ -22,6 +23,8 @@ import {
     HiComponent,
     ByeComponent,
     ErrorComponent,
+    CustomAppendPipe,
+    CustomChangeCasePipe,
   ],
   bootstrap: [AppComponent],
   providers: [

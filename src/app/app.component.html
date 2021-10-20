@@ -1,5 +1,18 @@
-<a routerLink="/hello">Hello</a>
+<!-- {{ obj | json }} -->
 
+<!-- {{ name | append: 'ss':'ddd' }} -->
+
+{{ obj | changeCase | json}}
+
+<button (click)="onPipe()">Pipe</button>
+
+<button (click)="onPurePipe()">Pure Pipe</button>
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<hr />
+
+<a routerLink="/hello">Hello</a>
 
 <a routerLink="/login">Login</a>
 
