@@ -11,7 +11,13 @@ import { ErrorComponent } from './error.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule],
-  declarations: [AppComponent, HelloComponent, HiComponent, ByeComponent],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    HiComponent,
+    ByeComponent,
+    ErrorComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

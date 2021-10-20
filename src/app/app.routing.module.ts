@@ -18,6 +18,7 @@ const routes: Routes = [
       import('./Login/login.module').then((mod) => mod.LoginModule),
   },
   { path: '', redirectTo: '/hello', pathMatch: 'full' },
+  { path: '**', component: ErrorComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
