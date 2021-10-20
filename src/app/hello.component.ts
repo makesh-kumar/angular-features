@@ -4,8 +4,8 @@ import { Component, Input } from '@angular/core';
   selector: 'hello',
   template: `<h1>Hello Component</h1>
   
-  <a routerLink="/hi">Hi</a>
-  <a routerLink="/bye">Hi</a>
+  <a routerLink="./hi">Hi</a>
+  <a routerLink="./bye">Bye</a>
 
 
   <router-outlet></router-outlet>

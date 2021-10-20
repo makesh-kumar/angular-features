@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HelloComponent, HiComponent } from './hello.component';
+import { ErrorComponent } from './error.component';
+import { ByeComponent, HelloComponent, HiComponent } from './hello.component';
 
 const routes: Routes = [
   {
@@ -8,7 +9,7 @@ const routes: Routes = [
     component: HelloComponent,
     children: [
       { path: 'hi', component: HiComponent },
-      { path: 'hello', component: HelloComponent },
+      { path: 'bye', component: ByeComponent },
     ],
   },
   {

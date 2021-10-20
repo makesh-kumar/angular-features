@@ -1,1 +1,10 @@
 /* Add application styles & imports to this file! */
+
+a {
+  padding: 10px;
+  border: 1px solid red;
+  text-decoration: none;
+  margin: 10px;
+  width: 50px;
+  background-color: aqua;
+}

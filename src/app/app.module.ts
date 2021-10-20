@@ -7,6 +7,7 @@ import { ByeComponent, HelloComponent, HiComponent } from './hello.component';
 import { LoginModule } from './Login/login.module';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing.module';
+import { ErrorComponent } from './error.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule],
