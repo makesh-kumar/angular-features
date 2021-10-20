@@ -14,7 +14,11 @@ import {
   customCanDeActivateGuard,
 } from './Guards/custom.guard';
 import { CustomAppendPipe, CustomChangeCasePipe } from './Pipes/custom.pipes';
-import { HighLighterDirective } from './Directives/custom.directive';
+import {
+  HighLighterDirective,
+  isShowDirective,
+  UnlessDirective,
+} from './Directives/custom.directive';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule, AppRoutingModule],
@@ -27,6 +31,8 @@ import { HighLighterDirective } from './Directives/custom.directive';
     CustomAppendPipe,
     CustomChangeCasePipe,
     HighLighterDirective,
+    isShowDirective,
+    UnlessDirective,
   ],
   bootstrap: [AppComponent],
   providers: [

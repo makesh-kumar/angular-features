@@ -6,6 +6,7 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  public cond = true;
   public name = 'Makesh';
   public obj = [
     {
