@@ -9,14 +9,14 @@ export class CustomAppendPipe implements PipeTransform {
   }
 }
 
-
+//impure pipes
 @Pipe({
   name: 'changeCase',
   pure: false,
 })
 export class CustomChangeCasePipe implements PipeTransform {
   transform(value: any, ...args: any[]) {
-    console.log(value);
+    // console.log(value);
     const ne = value.map((data) => {
       data.name = data.name.toString().toUpperCase();
       return data;

@@ -1,13 +1,18 @@
-<!-- {{ obj | json }} -->
+<h3>Directives</h3>
 
-<!-- {{ name | append: 'ss':'ddd' }} -->
+<p highLight>To test directive</p>
+<hr />
 
-{{ obj | changeCase | json}}
+<h3>Pipes</h3>
+{{ name | append: 'ss':'ddd':'kkk' }}
+
+{{ obj | changeCase | json }}
 
 <button (click)="onPipe()">Pipe</button>
 
 <button (click)="onPurePipe()">Pure Pipe</button>
 
+<hr />
 
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 <hr />
