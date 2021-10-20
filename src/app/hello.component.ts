@@ -19,6 +19,10 @@ export class HelloComponent {
   constructor(private route: ActivatedRoute) {
     console.log(this.route);
   }
+
+  canExit() {
+    return true;
+  }
 }
 
 @Component({

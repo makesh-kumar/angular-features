@@ -3,6 +3,7 @@ import {
   ActivatedRouteSnapshot,
   CanActivate,
   CanActivateChild,
+  CanDeactivate,
   CanLoad,
   Resolve,
   Route,
@@ -11,6 +12,7 @@ import {
   UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
+import { LoginComponent } from '../Login/login-component';
 
 @Injectable()
 export class customCanActivateGuard implements CanActivate {
@@ -24,6 +26,27 @@ export class customCanActivateGuard implements CanActivate {
     | Promise<boolean | UrlTree> {
     console.log('in can activate guard');
     return true;
+  }
+}
+
+export interface IMy {
+  canExit: () => Observable<boolean> | Promise<boolean> | boolean;
+}
+
+@Injectable()
+export class customCanDeActivateGuard implements CanDeactivate<IMy> {
+  canDeactivate(
+    component: IMy,
+    currentRoute: ActivatedRouteSnapshot,
+    currentState: RouterStateSnapshot,
+    nextState?: RouterStateSnapshot
+  ):
+    | boolean
+    | UrlTree
+    | Observable<boolean | UrlTree>
+    | Promise<boolean | UrlTree> {
+    return confirm('aa');
+    // return component.canExit();
   }
 }
 
@@ -69,6 +92,6 @@ export class customCanLoadGuard implements CanLoad {
 export class customResolveGuard implements Resolve<any> {
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     console.log('in resolve guard');
-    return 'ss';
+    return 'RESOLVED DATA !!';
   }
 }

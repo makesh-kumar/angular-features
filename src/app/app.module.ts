@@ -11,6 +11,7 @@ import { ErrorComponent } from './error.component';
 import {
   customCanActivaChildteGuard,
   customCanActivateGuard,
+  customCanDeActivateGuard,
 } from './Guards/custom.guard';
 
 @NgModule({
@@ -23,6 +24,10 @@ import {
     ErrorComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [customCanActivateGuard, customCanActivaChildteGuard],
+  providers: [
+    customCanActivateGuard,
+    customCanActivaChildteGuard,
+    customCanDeActivateGuard,
+  ],
 })
 export class AppModule {}

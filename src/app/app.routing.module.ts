@@ -4,6 +4,7 @@ import { ErrorComponent } from './error.component';
 import {
   customCanActivaChildteGuard,
   customCanActivateGuard,
+  customCanDeActivateGuard,
   customCanLoadGuard,
   customResolveGuard,
 } from './Guards/custom.guard';
@@ -14,7 +15,7 @@ const routes: Routes = [
     path: 'hello',
 
     component: HelloComponent,
-    resolve: [customResolveGuard],
+    resolve: { res: customResolveGuard },
     canActivateChild: [customCanActivaChildteGuard],
 
     children: [
@@ -25,6 +26,7 @@ const routes: Routes = [
 
   {
     path: 'login',
+    canDeactivate: [customCanDeActivateGuard],
     canActivate: [customCanActivateGuard],
     canLoad: [customCanLoadGuard],
     loadChildren: () =>
